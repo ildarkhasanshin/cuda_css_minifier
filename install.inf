@@ -1,0 +1,11 @@
+[info]
+title=CSS Minifier
+desc=Makes CSS code compact
+type=cudatext-plugin
+subdir=cuda_css_minifier
+
+[item1]
+section=commands
+caption=CSS Minifier
+method=run
+lexers=CSS
