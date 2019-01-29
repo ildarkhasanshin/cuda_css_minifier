@@ -88,3 +88,19 @@ def run(do_format):
         msg_status(MSG + "Formatting entire text")
         ed.set_caret(0, 0)
         ed.set_text_all(text)
+
+def min_css(do_format):
+    text = ed.get_text_all()
+    text = do_format(text)
+    if not text:
+        msg_status(MSG + "Cannot format text")
+        return
+
+    min_css_path = ed.get_filename().replace('.css', '.min.css')
+    if os.path.isfile(min_css_path):
+        res = msg_box('File ' + min_css_path + ' already exists', MB_OK)
+    else:
+        f = open(min_css_path, 'w')
+        f.write(text)
+        f.close()
+    file_open(min_css_path)

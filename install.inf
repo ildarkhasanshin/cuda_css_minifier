@@ -3,9 +3,16 @@ title=CSS Minifier
 desc=Makes CSS code compact
 type=cudatext-plugin
 subdir=cuda_css_minifier
+homepage=https://github.com/CudaText-addons/cuda_css_minifier
 
 [item1]
 section=commands
-caption=CSS Minifier
+caption=CSS Minifier\Minify and save to current file
 method=run
+lexers=CSS
+
+[item2]
+section=commands
+caption=CSS Minifier\Minify and save to new file filename.min.css
+method=save_to_min_css
 lexers=CSS
